@@ -1,0 +1,32 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block seccion %}
+
+<h1>Panel de Control de Users</h1>
+                            
+{% endblock %}
+
+{% block contenido %}
+
+    <h2>Bienvenide al Sistema</h2>
+
+    <div class="row">
+
+        <div class="col-4">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ user.username }}</h5>
+                  <p class="card-text">Aún no estás inscripte en ningún curso.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+    <a href="{% url 'Logout' %}" class="btn btn-primary">Cerrar Sesion</a>
+    <a href="{% url 'EditarPerfil' %}" class="btn btn-warning">Editar</a>
+   
+
+{% endblock %}

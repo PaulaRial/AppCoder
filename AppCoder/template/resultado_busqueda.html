@@ -1,0 +1,31 @@
+{% extends "padre.html" %}
+
+{% block seccion %}
+
+    <h1>Resultado de búsqueda</h1>
+                            
+{% endblock %}
+
+{% block contenido %}
+
+    <h2> Cursos Disponibles </h2>
+ 
+    {% if cursos %}
+        <table class="table">
+             <tr>
+                <th></th>
+                 <th>Nombre</th>
+                <th>Comision</th>
+             </tr>
+             {% for curso in cursos %}
+            <tr>
+                <td>{{curso.nombre}}</td>
+                <td>{{curso.comision}}</td>
+            {% endfor %}
+            </tr>
+        </table>
+    {% else %}
+        <p> No se encontraron resultados</p>
+    {% endif %}
+
+{% endblock %}
