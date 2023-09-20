@@ -17,4 +17,7 @@ class Avatar(models.Model):
 class Profesores(models.Model):
     nombre = models.CharField(max_length=60)
     materia = models.CharField(max_length=60)
-   
+    
+class LibrosyProgramas(models.Model):
+    nombre = models.CharField(max_length=60)
+    materia = models.CharField(max_length=60)

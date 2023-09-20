@@ -18,6 +18,7 @@ urlpatterns = [
     path ("register", views.register, name="Register"),
     path ("logout", LogoutView.as_view(template_name="logout.html"), name="Logout"),
     path ("editarPerfil", views.editarPerfil, name="EditarPerfil"),
-    path('about', views.about, name='about')
+    path('about', views.about, name='about'),
+    path('librosyprogramas', views.about, name='material'),
 
 ]

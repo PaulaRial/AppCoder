@@ -166,6 +166,9 @@ def about(request):
         return render (request, "about.html", {"url":avatares[0].imagen.url})
     else:
         return render (request, "about.html")
-    
+
+def librosyprogramas(request):
+    avatares = Avatar.objects.filter(user=request.user.id)
+    return render(request, "librosyprogramas.html", {"url":avatares[0].imagen.url})    
    
 
